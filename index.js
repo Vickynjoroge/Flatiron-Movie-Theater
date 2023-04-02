@@ -29,9 +29,7 @@ function getAllMovies() {
       document.querySelector('#movie-tickets-sold').textContent = firstMovie.tickets_sold;
       
       //calculate number of available tickets element
-      const capacity = 100; // For example, the theater capacity is 100
-      const ticketsSold = firstMovie.tickets_sold;
-      const availableTickets = capacity - ticketsSold;
+        
       //update available number ticket element
       document.querySelector('#movie-available-tickets')
       // set src attribute of img element to movie poster
@@ -45,12 +43,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Get data and render movies to the DOM
     getAllMovies();
   
-    // Add event listener to buy ticket button
-  document.querySelector('#buy-ticket-button').addEventListener('click', () => {
-    const selectedMovieId = document.querySelector('#movie-select').value;
-    if (selectedMovieId !== '') {
-      // redirect to ticket purchase page with selected movie id
-      window.location.href = `/purchase-ticket.html?movie=${selectedMovieId}`;
-    }
+   
   });
-});
+;
